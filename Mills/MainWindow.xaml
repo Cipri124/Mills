@@ -1,0 +1,28 @@
+﻿<Window x:Class="Mills.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:views="clr-namespace:Mills.Views"
+        mc:Ignorable="d"
+        Title="Moara" Height="650" Width="800" ResizeMode="NoResize">
+    
+    <Grid Background="White">
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="5*" />
+        </Grid.RowDefinitions>
+
+        <Button Grid.Column="0" Grid.Row="0" Content="Start Game" Width="150" Height="50" Command="{Binding Path=StartTwoPlayerGameCommand}" />
+       
+
+        <views:BoardControl x:Name="BoardControl" Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" />
+
+    </Grid>
+</Window>
